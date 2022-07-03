@@ -1,10 +1,15 @@
 export default function Product(props) {
-  const { bicycle, handleChoose, setselectBicycle } = props;
+  const { bicycle, handleBicycleChoose, selectBicycle } = props;
+
   return (
     <div
-      className="mb-10 p-5 border-4"
+      className={`${
+        bicycle.id == selectBicycle.id
+          ? "mb-10 p-5 border-4 choosed"
+          : "mb-10 p-5 border-4"
+      }`}
       id={`bicycle-${bicycle.id}`}
-      onClick={() => handleChoose(bicycle)}
+      onClick={() => handleBicycleChoose(bicycle)}
     >
       <div className="img-container">
         <img src={require("../../asserts/bicycle2.png")} alt={bicycle.title} />

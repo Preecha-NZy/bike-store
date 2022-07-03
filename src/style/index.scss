@@ -20,6 +20,9 @@
   align-items: center;
 }
 
+.app-container {
+  width: 100%;
+}
 .choosed {
   border-width: 4px;
   --tw-border-opacity: 1;
@@ -51,4 +54,8 @@
   border: 1px solid #0063be;
   color: white;
   cursor: pointer;
+}
+
+.list-none {
+  margin-left: -10px;
 }
